@@ -150,7 +150,7 @@ def test_compare_with_non_temperature() -> None:
     assert temp.__lt__(0) is NotImplemented
     assert temp != 0
     with pytest.raises(TypeError):
-        temp < 0
+        assert temp < 0
 
 
 # 6. Formatting

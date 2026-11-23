@@ -3,6 +3,8 @@ Tests for the Temperature class.
 
 Run from the repository root with:
 python -m pytest -v test_temperature.py
+
+Sivert Svenningsen and Fabian Feiler, INF201 Deliverable 4
 """
 
 import pytest

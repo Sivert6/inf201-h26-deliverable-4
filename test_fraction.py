@@ -1,4 +1,3 @@
-
 """
 Tests for the Fraction class. Run with: python -m pytest test_fraction.py -v
 
@@ -46,6 +45,27 @@ def test_init_not_integers(numerator: object, denominator: object) -> None:
     """Numerator and denominator that are not integers raise TypeError"""
     with pytest.raises(TypeError):
         Fraction(numerator, denominator)
+
+
+@pytest.mark.parametrize("numerator, denominator", [(True, 2), (1, True), (False, 1)])
+def test_init_bool_not_allowed(numerator: object, denominator: object) -> None:
+    """True and False are not accepted, even though bool is a subclass of int"""
+    with pytest.raises(TypeError):
+        Fraction(numerator, denominator)
+
+
+def test_numerator_is_read_only() -> None:
+    """numerator cannot be changed after the fraction is created"""
+    f = Fraction(1, 2)
+    with pytest.raises(AttributeError):
+        f.numerator = 3
+
+
+def test_denominator_is_read_only() -> None:
+    """denominator cannot be changed, so f.denominator = 0 is not possible"""
+    f = Fraction(1, 2)
+    with pytest.raises(AttributeError):
+        f.denominator = 0
 
 
 # String representations

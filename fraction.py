@@ -1,4 +1,3 @@
-
 """
 Fraction class.
 
@@ -21,12 +20,24 @@ class Fraction:
         """
         if not isinstance(numerator, int) or not isinstance(denominator, int):
             raise TypeError("Numerator and denominator must be integers")
+        if isinstance(numerator, bool) or isinstance(denominator, bool):  # bool is a subclass of int
+            raise TypeError("Numerator and denominator cannot be True or False")
         if denominator <= 0:
             raise ValueError("Denominator must be positive")
 
         divisor = gcd(numerator, denominator)  # Used to reduce the fraction, e.g. 2/4 -> 1/2
-        self.numerator = numerator // divisor
-        self.denominator = denominator // divisor
+        self._numerator = numerator // divisor  # Protected: read through the numerator property
+        self._denominator = denominator // divisor  # Protected: read through the denominator property
+
+    @property
+    def numerator(self) -> int:
+        """The numerator of the fraction (read-only)"""
+        return self._numerator
+
+    @property
+    def denominator(self) -> int:
+        """The denominator of the fraction (read-only)"""
+        return self._denominator
 
     def __repr__(self) -> str:
         """
@@ -199,7 +210,3 @@ class Fraction:
             numerator = -numerator
             denominator = -denominator
         return Fraction(numerator, denominator)
-
-
-
-

@@ -1,5 +1,7 @@
 """
 A Temperature class supporting Celsius, Fahrenheit and Kelvin.
+
+Sivert Svenningsen and Fabian Feiler, INF201 Deliverable 4
 """
 
 VALID_UNITS = ["C", "F", "K"]

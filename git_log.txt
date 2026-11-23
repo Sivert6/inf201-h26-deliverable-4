@@ -1,0 +1,26 @@
+* 1341903 - Fabian Feiler, 16 minutes ago : Fix review description in Discussion
+*   ce80f68 - Fabian Feiler, 32 minutes ago : Merge pull request #4 from Sivert6/feature/readme
+|\  
+| * a4fcd0e - Fabian Feiler, 33 minutes ago : Add README with project description and setup
+|/  
+*   595dad3 - Sivert6, 38 minutes ago : Merge pull request #3 from Sivert6/feature/task1-text-fixes
+|\  
+| * 5c00df2 - Fabian Feiler, 41 minutes ago : Add author line to Temperature files
+| * 1af32d9 - Fabian Feiler, 41 minutes ago : Fix tolerance example in Task 1 notebook text
+|/  
+* e6c85ba - Sivert Hole Svenningsen, 3 hours ago : Add discussion
+* 514c4bb - Sivert Hole Svenningsen, 3 hours ago : Make numerator and denominator read-only, reject bool
+*   c07d483 - Sivert6, 3 hours ago : Merge pull request #2 from Sivert6/feature/notebook-task1
+|\  
+| * 7767f5f - Fabian Feiler, 4 days ago : Fix bugs
+| * 9b8e8ee - Fabian Feiler, 4 days ago : Fix Ruff warnings in test_temperature
+| * 95c9dd5 - Fabian Feiler, 4 days ago : Add Task 1 section to notebook
+|/  
+*   be17451 - Sivert6, 6 days ago : Merge pull request #1 from Sivert6/feature/temperature-tests
+|\  
+| * 1fcf826 - Fabian Feiler, 6 days ago : Implement Temperature class
+| * 85752fb - Fabian Feiler, 6 days ago : Add pytest tests for Temperature class
+* | 5227f48 - Sivert Hole Svenningsen, 6 days ago : Add Task 2: Fraction class, tests and notebook
+|/  
+* 74a56ad - Sivert Hole Svenningsen, 6 days ago : Initial setup
+* d08aafe - Sivert6, 6 days ago : Initial commit
